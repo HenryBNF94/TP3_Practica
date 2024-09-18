@@ -1,0 +1,132 @@
+<!-- webApp/templates/inicio.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANF Technology & Imports</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'webApp/css/styles.css' %}">
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <div class="logo">
+            <img src="{% static 'webApp/images/logo.png' %}" alt="ANF Technology & Imports Logo" class="logo-img">
+            <h1>ANF Technology & Imports</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'ofertas' %}">Ofertas</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="#" class="btn-cta">Mi Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Bienvenido a ANF Technology & Imports</h2>
+            <p>Soluciones tecnológicas de alta calidad para tu hogar y negocio.</p>
+            <a href="{% url 'productos' %}" class="btn-hero">Explorar Productos</a>
+        </div>
+    </section>
+
+    <!-- Sección de Características -->
+    <section class="caracteristicas">
+        <h2>¿Por Qué Elegirnos?</h2>
+        <div class="caracteristicas-grid">
+            <div class="caracteristica">
+                <img src="{% static 'webApp/images/calidad.png' %}" alt="Alta Calidad">
+                <h3>Alta Calidad</h3>
+                <p>Ofrecemos solo los mejores productos, asegurando calidad y durabilidad en cada compra.</p>
+            </div>
+            <div class="caracteristica">
+                <img src="{% static 'webApp/images/envio.png' %}" alt="Envío Rápido">
+                <h3>Envío Rápido</h3>
+                <p>Envío seguro y rápido a todo el país. Recibe tus productos en tiempo récord.</p>
+            </div>
+            <div class="caracteristica">
+                <img src="{% static 'webApp/images/soporte.png' %}" alt="Soporte Técnico">
+                <h3>Soporte Técnico</h3>
+                <p>Nuestro equipo está listo para ayudarte con cualquier duda o problema técnico.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Productos Destacados -->
+    <section class="productos-destacados">
+        <h2>Productos Destacados</h2>
+        <div class="productos">
+            <div class="producto">
+                <img src="{% static 'webApp/images/laptop.jpg' %}" alt="Laptop Gamer">
+                <h3>Laptop Gamer</h3>
+                <p class="precio">$1500.00</p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'webApp/images/ram.jpg' %}" alt="Memoria RAM 16GB">
+                <h3>Memoria RAM 16GB</h3>
+                <p class="precio">$80.00</p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'webApp/images/monitor.jpg' %}" alt="Monitor 4K">
+                <h3>Monitor 4K</h3>
+                <p class="precio">$350.00</p>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+        <a href="{% url 'productos' %}" class="btn-hero">Ver Más Productos</a>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section class="testimonios">
+        <h2>Lo Que Dicen Nuestros Clientes</h2>
+        <div class="testimonios-grid">
+            <div class="testimonio">
+                <p>"El servicio y la calidad de los productos de ANF Technology & Imports son excepcionales. ¡Muy recomendados!"</p>
+                <h4>- Juan Pérez</h4>
+            </div>
+            <div class="testimonio">
+                <p>"Rápidos, confiables y con un soporte técnico que realmente sabe lo que hace. ¡Cinco estrellas!"</p>
+                <h4>- María López</h4>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre ANF Technology & Imports</h4>
+                <p>Nos dedicamos a ofrecer productos tecnológicos de alta calidad y servicios excepcionales.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                    <li><a href="{% url 'ofertas' %}">Ofertas</a></li>
+                    <li><a href="{% url 'productos' %}">Productos</a></li>
+                    <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: contacto@anftechimports.com</p>
+                <p>Teléfono: +51 123 456 789</p>
+                <div class="social-icons">
+                    <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <p>&copy; 2024 ANF Technology & Imports. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!-- webApp/templates/ofertas.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas - ANF Technology & Imports</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'webApp/css/styles.css' %}">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <img src="{% static 'webApp/images/logo.png' %}" alt="ANF Technology & Imports Logo" class="logo-img">
+            <h1>ANF Technology & Imports</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'ofertas' %}">Ofertas</a></li> <!-- Aquí está el cambio -->
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="#" class="btn-cta">Mi Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Ofertas -->
+    <section class="ofertas-page">
+        <h2>Ofertas Especiales</h2>
+        <p>¡Aprovecha nuestras ofertas exclusivas por tiempo limitado!</p>
+        <div class="productos">
+            <div class="producto">
+                <img src="{% static 'webApp/images/gpu.jpg' %}" alt="Tarjeta Gráfica GTX 1660">
+                <h3>Tarjeta Gráfica GTX 1660</h3>
+                <p class="precio">Antes: $300.00 <span>Ahora: $250.00</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'webApp/images/ssd.jpg' %}" alt="SSD 1TB">
+                <h3>SSD 1TB</h3>
+                <p class="precio">Antes: $150.00 <span>Ahora: $120.00</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'webApp/images/monitor.jpg' %}" alt="Monitor 24' Full HD">
+                <h3>Monitor 24" Full HD</h3>
+                <p class="precio">Antes: $200.00 <span>Ahora: $170.00</span></p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <!-- Agregar más productos si es necesario -->
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre ANF Technology & Imports</h4>
+                <p>Ofrecemos productos tecnológicos de alta calidad al mejor precio.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: contacto@anftechimports.com</p>
+                <p>Teléfono: +51 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <p>Facebook | Twitter | Instagram | LinkedIn</p>
+            </div>
+        </div>
+        <p>&copy; 2024 ANF Technology & Imports. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

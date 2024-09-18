@@ -1,0 +1,100 @@
+<!-- webApp/templates/productos.html -->
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - ANF Technology & Imports</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'webApp/css/styles.css' %}">
+</head>
+<body>
+    <!-- Encabezado principal -->
+    <header>
+        <div class="logo">
+            <img src="{% static 'webApp/images/logo.png' %}" alt="ANF Technology & Imports Logo" class="logo-img">
+            <h1>ANF Technology & Imports</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'inicio' %}">Inicio</a></li>
+                <li><a href="{% url 'ofertas' %}">Ofertas</a></li>
+                <li><a href="{% url 'productos' %}">Productos</a></li>
+                <li><a href="{% url 'servicios' %}">Servicios</a></li>
+                <li><a href="{% url 'contacto' %}">Contacto</a></li>
+                <li><a href="#" class="btn-cta">Mi Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Barra de navegación secundaria para productos -->
+    <nav class="productos-nav">
+        <ul>
+            <li><a href="#">Impresoras</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">Procesadores</a></li>
+            <li><a href="#">Monitores</a></li>
+            <li><a href="#">Memoria RAM</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de productos -->
+    <section class="productos-page">
+        <h2>Nuestros Productos</h2>
+        <p>Explora nuestra amplia gama de productos tecnológicos de alta calidad.</p>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="{% static 'webApp/images/impresora.jpg' %}" alt="Impresora Multifuncional">
+                <h3>Impresora Multifuncional</h3>
+                <p class="precio">$120.00</p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'webApp/images/laptop-gaming.jpg' %}" alt="Laptop Gamer">
+                <h3>Laptop Gamer</h3>
+                <p class="precio">$1500.00</p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'webApp/images/procesador.jpg' %}" alt="Procesador Intel Core i7">
+                <h3>Procesador Intel Core i7</h3>
+                <p class="precio">$320.00</p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'webApp/images/monitor.jpg' %}" alt="Monitor 24' Full HD">
+                <h3>Monitor 24" Full HD</h3>
+                <p class="precio">$200.00</p>
+                <button>Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="{% static 'webApp/images/ram.jpg' %}" alt="Memoria RAM 16GB">
+                <h3>Memoria RAM 16GB</h3>
+                <p class="precio">$80.00</p>
+                <button>Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre ANF Technology & Imports</h4>
+                <p>Ofrecemos productos tecnológicos de alta calidad al mejor precio.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p>Email: contacto@anftechimports.com</p>
+                <p>Teléfono: +51 123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <h4>Síguenos</h4>
+                <p>Facebook | Twitter | Instagram | LinkedIn</p>
+            </div>
+        </div>
+        <p>&copy; 2024 ANF Technology & Imports. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
